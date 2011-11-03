@@ -1,5 +1,9 @@
 /.project
 /.buildpath
 /.settings
-/app/cache
-/app/logs
+/app/cache/*
+!/app/cache/.gitkeep
+/app/logs/*
+!/app/logs/.gitkeep
+/vendor/*
+!/vendor/.gitkeep
