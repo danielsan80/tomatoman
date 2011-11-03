@@ -1,9 +1,9 @@
 /.project
 /.buildpath
 /.settings
+/web/bundles/
+/app/bootstrap*
 /app/cache/*
-!/app/cache/.gitkeep
 /app/logs/*
-!/app/logs/.gitkeep
-/vendor/*
-!/vendor/.gitkeep
+/vendor/
+/app/config/parameters.ini
