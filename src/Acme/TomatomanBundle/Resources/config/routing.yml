@@ -1,0 +1,10 @@
+homepage:
+    pattern:  /
+    defaults: { _controller: AcmeTomatomanBundle:Default:index }
+
+login:
+    pattern: /login
+    defaults: { _controller: AcmeTomatomanBundle:Security:login }
+
+login_check:
+    pattern: /login_check
