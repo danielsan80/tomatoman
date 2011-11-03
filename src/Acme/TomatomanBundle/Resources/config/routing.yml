@@ -8,3 +8,11 @@ login:
 
 login_check:
     pattern: /login_check
+    
+logout:
+    pattern: /logout
+
+
+admin_project_crud:    
+    resource: "routing/project.yml"
+    prefix: /admin/project

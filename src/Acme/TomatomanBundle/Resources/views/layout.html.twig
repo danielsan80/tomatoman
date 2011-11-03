@@ -7,9 +7,22 @@
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        <div class="symfony-content">
-            {% block content %}
-            {% endblock %}
+        <div id="symfony-wrapper">
+            <div class="symfony-menu">
+                <a href="{{ path('homepage') }}">home</a>
+                 | 
+                {% if is_granted('ROLE_USER') %}
+                    <a href="{{ path('logout') }}">logout</a>
+                {% else %}
+                    <a href="{{ path('login') }}">login</a>
+                {% endif %}
+                 | 
+                <a href="{{ path('admin_project') }}">Gestione Progetti</a>
+            </div>    
+            <div class="symfony-content">
+                {% block content %}
+                {% endblock %}
+            </div>
         </div>
     </body>
 </html>

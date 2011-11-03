@@ -1,0 +1,30 @@
+admin_project:
+    pattern:  /
+    defaults: { _controller: "AcmeTomatomanBundle:Project:index" }
+
+admin_project_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "AcmeTomatomanBundle:Project:show" }
+
+admin_project_new:
+    pattern:  /new
+    defaults: { _controller: "AcmeTomatomanBundle:Project:new" }
+
+admin_project_create:
+    pattern:  /create
+    defaults: { _controller: "AcmeTomatomanBundle:Project:create" }
+    requirements: { _method: post }
+
+admin_project_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "AcmeTomatomanBundle:Project:edit" }
+
+admin_project_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "AcmeTomatomanBundle:Project:update" }
+    requirements: { _method: post }
+
+admin_project_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "AcmeTomatomanBundle:Project:delete" }
+    requirements: { _method: post }
