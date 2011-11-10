@@ -26,6 +26,7 @@ assetic:
     debug:          %kernel.debug%
     use_controller: false
     # java: /usr/bin/java
+    sass: /var/lib/gems/1.9.1/bin/sass
     
     filters:
         cssrewrite: ~
