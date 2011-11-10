@@ -3,8 +3,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         {% stylesheets
-            '@AcmeTomatomanBundle/Resources/public/css/*'
-            filter='yui_css'
+            '@AcmeTomatomanBundle/Resources/public/sass/demo.sass'
+            '@AcmeTomatomanBundle/Resources/public/sass/table.sass'
+            filter='sass,yui_css'
             output='css/compiled/main.css'
         %}
             <link rel="stylesheet" href="{{ asset_url }}" />
