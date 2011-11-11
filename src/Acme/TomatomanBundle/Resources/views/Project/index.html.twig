@@ -20,16 +20,28 @@
                     <td><a href="{{ path('admin_project_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                     <td>{{ entity.name }}</td>
                     <td>{{ entity.description }}</td>
-                    <td>{{ entity.active }}</td>
                     <td>
-                        <ul>
-                            <li>
-                                <a href="{{ path('admin_project_show', { 'id': entity.id }) }}">show</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('admin_project_edit', { 'id': entity.id }) }}">edit</a>
-                            </li>
-                        </ul>
+                        {% if entity.active %} 
+                            {% image '@AcmeTomatomanBundle/Resources/public/icons/true.png' %}
+                                <img src="{{asset_url}}" />
+                            {% endimage %}
+                        {% else %}
+                            {% image '@AcmeTomatomanBundle/Resources/public/icons/false.png' %}
+                                <img src="{{asset_url}}" />
+                            {% endimage %}
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="{{ path('admin_project_show', { 'id': entity.id }) }}">
+                            {% image '@AcmeTomatomanBundle/Resources/public/icons/show.png' %}
+                                <img src="{{asset_url}}" />
+                            {% endimage %}
+                        </a>
+                        <a href="{{ path('admin_project_edit', { 'id': entity.id }) }}">
+                            {% image '@AcmeTomatomanBundle/Resources/public/icons/delete.png' %}
+                                <img src="{{asset_url}}" />
+                            {% endimage %}
+                        </a>
                     </td>
                 </tr>
             {% endfor %}
