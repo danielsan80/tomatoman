@@ -34,7 +34,7 @@ assetic:
     # java: /usr/bin/java
     sass: /var/lib/gems/1.9.1/bin/sass
     # compass: /home/danilo/.gem/ruby/1.9.1/bin/compass
-    
+
     filters:
         cssrewrite: ~
         sass: ~
