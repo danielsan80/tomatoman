@@ -9,25 +9,34 @@
         %}
             <link rel="stylesheet" href="{{ asset_url }}" />
         {% endstylesheets %}
-        <title>{% block title %}Demo Bundle{% endblock %}</title>
+        <title>Tomatoman {% block title %}{% endblock %}</title>
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         <div id="symfony-wrapper">
-            <div class="symfony-menu">
-                <a href="{{ path('homepage') }}">home</a>
-                 | 
-                {% if is_granted('ROLE_USER') %}
-                    <a href="{{ path('logout') }}">logout</a>
-                {% else %}
-                    <a href="{{ path('login') }}">login</a>
-                {% endif %}
-                 | 
-                <a href="{{ path('admin_project') }}">Progetti</a>
-            </div>    
+            <div id="symfony-header" >
+                <div class="symfony-logo logo">
+                    <a href="{{ path('homepage') }}">
+                        {% image '@AcmeTomatomanBundle/Resources/public/images/logo.gif' %}
+                            <img src="{{asset_url}}" width="70" />
+                        {% endimage %}
+                    </a>
+                </div>
+                <div class="symfony-menu menu">
+                    <a href="{{ path('homepage') }}">home</a>
+                     |
+                    {% if is_granted('ROLE_USER') %}
+                        <a href="{{ path('logout') }}">logout</a>
+                    {% else %}
+                        <a href="{{ path('login') }}">login</a>
+                    {% endif %}
+                     |
+                    <a href="{{ path('admin_project') }}">Progetti</a>
+                </div>
+                <div class="clr"></div>
+            </div>
             <div class="symfony-content">
-                {% block content %}
-                {% endblock %}
+                {% block content %}{% endblock %}
             </div>
         </div>
     </body>

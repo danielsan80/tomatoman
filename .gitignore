@@ -3,6 +3,8 @@
 /.settings
 /nbproject
 /web/bundles/
+/web/css/compiled/
+/web/images
 /app/bootstrap*
 /app/cache/*
 /app/logs/*
