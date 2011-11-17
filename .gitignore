@@ -1,6 +1,7 @@
 /.project
 /.buildpath
 /.settings
+/nbproject
 /web/bundles/
 /app/bootstrap*
 /app/cache/*
